@@ -1,0 +1,16 @@
+<%= form_with model: @user do |form| %>
+<div class="form-group">
+  <%= form.label "Username :" %>
+  <%= form.text_field :username, placeholder: "Your user name here", :class => 'form-control' %>
+  </div>
+<div class="form-group">
+  <%= form.label "Email Address :" %>
+  <%= form.text_field :email, placeholder: "example@example.com", :class => 'form-control' %>
+</div>
+<div class="form-group">
+  <%= form.label "Password :" %>
+  <%= form.password_field :password, :class => 'form-control' %>
+</div>
+  <%= form.submit :class => 'btn btn-primary' %>
+  <%= link_to "Back", users_path, :class => 'btn btn-success' %>
+<% end %>

@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">No #</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @users.each_with_index do |user,index| %>
+    <tr>
+      <th scope="row"><%= index+1 %></th>
+      <td><%= link_to  user.username, user  %></td>
+      <td><%=  user.email %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<a href="/users/new" class="btn btn-success d-flex justify-content-center">NEW USER</a>
