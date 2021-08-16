@@ -1,0 +1,17 @@
+
+<% @users.each do |user| %>
+
+<div class="row d-flex justify-content-center mb-2  ">
+  <div class="col-sm-6">
+    <div class="card text-center border border-dark">
+      <div class="card-body ">
+        <h5 class="card-title">Username: <%= link_to  user.username, user  %></h5>
+        <p class="card-text"> Email: <%=  user.email %></p>
+        <a href="/users/<%= user.id %>/edit" class="btn btn-primary">Edit User</a>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<a href="/users/new" class="btn btn-success d-flex justify-content-center">NEW USER</a>
